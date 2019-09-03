@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/taxes.json?api_key=API_KEY
+    body:
+      encoding: UTF-8
+      string: '{"tax":{"name":"IVA37","value":"37.0","region":"PT","default_tax":"0"}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '79'
+      Connection:
+      - keep-alive
+      Status:
+      - '201'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7BzoPc2Vzc2lvbl9pZCIlY2Y3YmI3OGNjYWNlYzZlZDkxNWI4MGY3ZjgzNTlkYmQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiZPIGltcG9zdG8gZm9pIGNyaWFkbyBjb20gc3VjZXNzby4GOgpAdXNlZHsGOwdG--73f0cb861b4095da4c9641480c0bf8f61ab6596d;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '63'
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '{"tax":{"id":231844,"name":"IVA37","value":37.0,"region":"PT","default_tax":0}}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 23:00:26 GMT
+recorded_with: VCR 5.0.0

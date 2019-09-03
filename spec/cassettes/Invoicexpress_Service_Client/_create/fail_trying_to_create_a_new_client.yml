@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/clients.json?api_key=API_KEY
+    body:
+      encoding: UTF-8
+      string: '{"client":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '62'
+      Connection:
+      - keep-alive
+      Status:
+      - '422'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7BzoPc2Vzc2lvbl9pZCIlYzEyZjI0NDM5ZjgyMmM4Mzg2MjNhMjU5MWU5NmI2MDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoKZXJyb3IiJ05vbWUgw6kgdW0gY2FtcG8gb2JyaWdhdMOzcmlvPGJyLz4GOgpAdXNlZHsGOwdU--b0f2d5667ad922213dec84b297e6d916da0c2f7d;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '48'
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"error":"Nome \u00e9 um campo obrigat\u00f3rio"}]}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 22:57:21 GMT
+recorded_with: VCR 5.0.0

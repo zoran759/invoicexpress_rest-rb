@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/taxes/82613.json?api_key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - '"9ac7597e69c25b0c433685daa2ba1fe2"'
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7CDoNcHJvdmlkZXJvOg1Qcm92aWRlcgc6FkBhdHRyaWJ1dGVzX2NhY2hlewA6EEBhdHRyaWJ1dGVzeyMiD3NlY3VyZV9rZXkiLWVhODdmODc1MzRmZjg4YmM1ODUyNWM4OWEyMjFhMjYwOWZlZDFmMzEiE3Nob3dfZmVlZF9iYWNrIgYxIhBlbWFpbF9sYWJlbCIlRW1haWw6IHN1cHBvcnRAaW52b2ljZXhwcmVzcy5jb20iEXByb2R1Y3RfbmFtZSISSW52b2ljZVhwcmVzcyIKZW1haWwiHnN1cHBvcnRAaW52b2ljZXhwcmVzcy5jb20iB2lkIgY3IhFjb21wYW55X3NpdGUiE3d3dy5ydXBlYWwuY29tIhhub3RpZmljYXRpb25zX2VtYWlsIiRub3RpZmljYXRpb25zQGludm9pY2V4cHJlc3MuY29tIhN0YXhfY291bnRyeV9pZCIGMSIVcHVibGljX3VybF9zaG9ydCIaYXBwLmludm9pY2V4cHJlc3MuY29tIglwYXRoIgAiEmNvbnRhY3RfbGFiZWwiH1dlYjogd3d3Lmludm9pY2V4cHJlc3MuY29tIhNwYXltZW50c19lbWFpbCIfcGF5bWVudHNAaW52b2ljZXhwcmVzcy5jb20iCnBob25lMCIJbmFtZSIQSUUubWFrZW92ZXIiD2NyZWF0ZWRfYXQiGDIwMTEtMDQtMTQgMTM6MzQ6MzciEnVybF9zaG9ydF9hdXgiGmFwcC5pbnZvaWNleHByZXNzLmNvbSIgc29mdHdhcmVfY2VydGlmaWNhdGVfbnVtYmVyIggxOTIiFnNhZnRfcHJvZHVjdF9uYW1lIhlJbnZvaWNlWHByZXNzL1JVUEVBTCINaG9zdG5hbWUiHnd3dy5hcHAuaW52b2ljZXhwcmVzcy5jb20iE2Jsb2NrX2FjY291bnRzIgYxIg5zaG93X3BsYW4iBjEiDnVybF9zaG9ydCIaYXBwLmludm9pY2V4cHJlc3MuY29tIhFjb21wYW55X25hbWUiC1J1cGVhbCIcZGVmYXVsdF9zdXBwb3J0X2NoYW5uZWwwIg13aXRoX2NzcyIGMCIPb3duX2hlYWRlciIGMSIPdXBkYXRlZF9hdCIYMjAxMi0xMC0wOCAxNToxNjoxMyIUZGVmYXVsdF9wbGFuX2lkIgc2NSIPZnJvbV9lbWFpbCIkaW52b2ljZXhwcmVzc0BpbnZvaWNleHByZXNzLmNvbToPc2Vzc2lvbl9pZCIlOTM3MzM3ZjVkYzE1OTI3M2ExZjQ4ZTM2ZDk1OTM3MGQ6DHVzZXJfaWRpAvFd--798f16a1ab46ccacd8501b3fb806f7bfe95fc084;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '45'
+      Server:
+      - nginx
+    body:
+      encoding: ASCII-8BIT
+      string: '{"tax":{"id":82613,"name":"IVA23","value":23.0,"region":null,"default_tax":1}}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 23:00:25 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/clients.json?api_key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - '"00902fcc5f847d73aba865c3f8ab7942"'
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7CDoNcHJvdmlkZXJvOg1Qcm92aWRlcgc6FkBhdHRyaWJ1dGVzX2NhY2hlewA6EEBhdHRyaWJ1dGVzeyMiD3NlY3VyZV9rZXkiLWVhODdmODc1MzRmZjg4YmM1ODUyNWM4OWEyMjFhMjYwOWZlZDFmMzEiE3Nob3dfZmVlZF9iYWNrIgYxIhBlbWFpbF9sYWJlbCIlRW1haWw6IHN1cHBvcnRAaW52b2ljZXhwcmVzcy5jb20iEXByb2R1Y3RfbmFtZSISSW52b2ljZVhwcmVzcyIKZW1haWwiHnN1cHBvcnRAaW52b2ljZXhwcmVzcy5jb20iB2lkIgY3IhFjb21wYW55X3NpdGUiE3d3dy5ydXBlYWwuY29tIhhub3RpZmljYXRpb25zX2VtYWlsIiRub3RpZmljYXRpb25zQGludm9pY2V4cHJlc3MuY29tIhN0YXhfY291bnRyeV9pZCIGMSIVcHVibGljX3VybF9zaG9ydCIaYXBwLmludm9pY2V4cHJlc3MuY29tIglwYXRoIgAiEmNvbnRhY3RfbGFiZWwiH1dlYjogd3d3Lmludm9pY2V4cHJlc3MuY29tIhNwYXltZW50c19lbWFpbCIfcGF5bWVudHNAaW52b2ljZXhwcmVzcy5jb20iCnBob25lMCIJbmFtZSIQSUUubWFrZW92ZXIiD2NyZWF0ZWRfYXQiGDIwMTEtMDQtMTQgMTM6MzQ6MzciEnVybF9zaG9ydF9hdXgiGmFwcC5pbnZvaWNleHByZXNzLmNvbSIgc29mdHdhcmVfY2VydGlmaWNhdGVfbnVtYmVyIggxOTIiFnNhZnRfcHJvZHVjdF9uYW1lIhlJbnZvaWNlWHByZXNzL1JVUEVBTCINaG9zdG5hbWUiHnd3dy5hcHAuaW52b2ljZXhwcmVzcy5jb20iE2Jsb2NrX2FjY291bnRzIgYxIg5zaG93X3BsYW4iBjEiDnVybF9zaG9ydCIaYXBwLmludm9pY2V4cHJlc3MuY29tIhFjb21wYW55X25hbWUiC1J1cGVhbCIcZGVmYXVsdF9zdXBwb3J0X2NoYW5uZWwwIg13aXRoX2NzcyIGMCIPb3duX2hlYWRlciIGMSIPdXBkYXRlZF9hdCIYMjAxMi0xMC0wOCAxNToxNjoxMyIUZGVmYXVsdF9wbGFuX2lkIgc2NSIPZnJvbV9lbWFpbCIkaW52b2ljZXhwcmVzc0BpbnZvaWNleHByZXNzLmNvbToPc2Vzc2lvbl9pZCIlMzhmMDNiODgxYzMxNDAxZTJjYmQ2YjFkYTMyOWRhMzM6DHVzZXJfaWRpAvFd--08d99ddfbd4984a6563b29a1ce8acaaa0130fe6e;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '415'
+      Server:
+      - nginx
+    body:
+      encoding: ASCII-8BIT
+      string: '{"clients":[{"id":876063,"name":"Foobar\nFoobar","code":"2","language":null,"email":"miguel.verissimo@passworks.io","address":"Foobar
+        st.\n\nFoobarland","city":null,"postal_code":"1999","fiscal_id":null,"website":null,"country":"United
+        States","phone":"987654321","fax":null,"preferred_contact":{},"observations":null,"send_options":null},{"id":868327,"name":"FooBar\nMiguel","code":"1","language":null,"email":"miguel@passworks.io","address":"foobar
+        street\n\nfoobarland","city":null,"postal_code":"1999","fiscal_id":"209895071","website":null,"country":"Portugal","phone":"987654321","fax":null,"preferred_contact":{},"observations":null,"send_options":null},{"id":931901,"name":"Future
+        Platforms","code":"a0d535ad-dc04-4924-adc9-0668d1632b62","language":null,"email":"nick@futureplatforms.com","address":"357
+        Manhattan Building\n\nLondon","city":null,"postal_code":"E32UL","fiscal_id":"796
+        1350 07","website":null,"country":"UK","phone":"07506716468","fax":null,"preferred_contact":{},"observations":null,"send_options":null},{"id":6207597,"name":"John","code":"100","language":null,"email":null,"address":null,"city":null,"postal_code":null,"fiscal_id":null,"website":null,"phone":null,"fax":null,"preferred_contact":{},"observations":null,"send_options":null},{"id":865768,"name":"Luis
+        Mendes\nLuis Mendes","code":"76","language":null,"email":"tldpobox@gmail.com","address":"Pra\u00e7a
+        Fernando Lopes Gra\u00e7a\n\nBeja","city":null,"postal_code":"7800-003","fiscal_id":null,"website":null,"phone":"964561722","fax":null,"preferred_contact":{},"observations":null,"send_options":null},{"id":878706,"name":"Passworks\nNick
+        Adams","code":"6","language":null,"email":"nick.adams+2@passworks.io","address":"1
+        Street\n\nLisbon","city":null,"postal_code":"3424","fiscal_id":"209895071","website":null,"country":"Portugal","phone":"46534765354","fax":null,"preferred_contact":{},"observations":null,"send_options":null},{"id":877820,"name":"Passworks\nNick
+        Adams","code":"4","language":null,"email":"nick.adams@passworks.io","address":"50
+        Street\n\nLondon","city":null,"postal_code":"Sw67","fiscal_id":null,"website":null,"country":"Armenia","phone":"64545353454","fax":null,"preferred_contact":{"name":null,"email":null,"phone":null,"mobile":null},"observations":null,"send_options":null}],"pagination":{"current_page":1,"total_entries":7,"per_page":10,"total_pages":1}}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 22:57:20 GMT
+recorded_with: VCR 5.0.0

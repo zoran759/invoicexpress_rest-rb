@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/invoices.json?api_key=API_KEY
+    body:
+      encoding: UTF-8
+      string: '{"invoice":{"date":"07/05/2017","due_date":"08/05/2017","client":{"name":"John","code":"100"},"items":[{"name":"Product
+        A","description":"Cleaning product","unit_price":"10.0","quantity":"1.0"}]}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '695'
+      Connection:
+      - keep-alive
+      Status:
+      - '201'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7BzoPc2Vzc2lvbl9pZCIlMDljZGI1NjUxMGY2MzZkOGUwYTFlZjViM2IwOWMzYzYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BzoLbm90aWNlIiVBIGZhY3R1cmEgZm9pIGNyaWFkYSBjb20gc3VjZXNzbzoMd2FybmluZyIByUV4aXN0ZW0gZGFkb3Mgb2JyaWdhdMOzcmlvcyBwb3IgcHJlZW5jaGVyIGVtIDxhIGhyZWY9Ii9hY2NvdW50cy8yMjIyMS9lZGl0P2Vycm9ycz10cnVlIj5EYWRvcyBkYSBlbXByZXNhPC9hPi48L2JyPlNlbSBvIHByZWVuY2hpbWVudG8gZGVzdGVzIGRhZG9zLCBuw6NvIMOpIHBvc3PDrXZlbCBjb211bmljYXIgYSBzdWEgZmFjdHVyYcOnw6NvIMOgIEFULgY6CkB1c2Vkewc7B0Y7CEY%3D--57ed835ba3d39d1706276c06dfc0f3bde07d7d83;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '229'
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '{"invoice":{"id":24206414,"status":"draft","archived":false,"type":"Invoice","sequence_number":"rascunho","date":"07/05/2017","due_date":"08/05/2017","reference":null,"observations":null,"retention":null,"permalink":"https://www.app.invoicexpress.com/documents/24206414c2bc09b290640de3cceb17940a405d6083611129","sum":10.0,"discount":0.0,"before_taxes":10.0,"taxes":2.3,"total":12.3,"currency":"Euro","client":{"id":6207597,"name":"John","code":"100"},"items":[{"name":"Product
+        A","description":"Cleaning product","unit_price":"10.0","unit":null,"quantity":"1.0","tax":{"id":82613,"name":"IVA23","value":23.0},"discount":0.0,"subtotal":10.0,"tax_amount":2.3,"discount_amount":0.0,"total":12.3}]}}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 22:57:24 GMT
+recorded_with: VCR 5.0.0

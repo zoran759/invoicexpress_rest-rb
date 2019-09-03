@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/taxes/231844.json?api_key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1'
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7BzoPc2Vzc2lvbl9pZCIlMjJiNzIzZjhkNjVjYmY2ZDczMTJjZGY3M2I2MzVmNzMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BzoKZXJyb3IwOgtub3RpY2UiKU8gaW1wb3N0byBmb2kgZWxpbWluYWRvIGNvbSBzdWNlc3NvLgY6CkB1c2Vkewc7B1Q7CEY%3D--c5e46ddcc6581ca5659058f08d07ecd7498f7e70;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '133'
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 23:01:10 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/taxes.json?api_key=API_KEY
+    body:
+      encoding: UTF-8
+      string: '{"tax":{"name":"IVA23","value":"23.0","region":"PT","default_tax":"1"}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Status:
+      - '422'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7BzoPc2Vzc2lvbl9pZCIlYzk3OTc3OThkZTRlNWU5MzgzMzRkOGYyMmNlMzRjNmYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoKZXJyb3IiJk5vbWUgbsOjbyBlc3TDoSBkaXNwb27DrXZlbC48YnIvPgY6CkB1c2VkewY7B1Q%3D--73aff28006359d4ac6c49368c2bfc0f59d6940ff;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '46'
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '[["name","n\u00e3o est\u00e1 dispon\u00edvel."]]'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 23:00:26 GMT
+recorded_with: VCR 5.0.0

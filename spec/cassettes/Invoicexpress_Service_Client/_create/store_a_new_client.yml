@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/clients.json?api_key=API_KEY
+    body:
+      encoding: UTF-8
+      string: '{"client":{"name":"Client Name","code":"12345","email":"foo@bar.com","language":"pt","address":"Avenida
+        da República, Lisboa","city":"Lisboa","postal_code":"1050-555","country":"Portugal","fiscal_id":"508025338","website":"www.invoicexpress.com","phone":"213456789","fax":"213456788","preferred_contact":{"name":"Bruce
+        Norris","email":"email@invoicexpress.com","phone":"213456789"},"observations":"Observations","send_options":"1"}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '462'
+      Connection:
+      - keep-alive
+      Status:
+      - '201'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7BzoPc2Vzc2lvbl9pZCIlN2U5NDExOTI3YzAwNWM5NWE1MjVjZTljOTcwNjViYWYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIiFDb250YWN0byBjcmlhZG8gY29tIHN1Y2Vzc28uBjoKQHVzZWR7BjsHRg%3D%3D--df2a994054817f2b9b1a8d8d4685dfc49f45871b;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '217'
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '{"client":{"id":6212263,"name":"Client Name","code":"12345","language":"pt","email":"foo@bar.com","address":"Avenida
+        da Rep\u00fablica, Lisboa","city":"Lisboa","postal_code":"1050-555","fiscal_id":"508025338","website":"www.invoicexpress.com","country":"Portugal","phone":"213456789","fax":"213456788","preferred_contact":{"name":"Bruce
+        Norris","email":"email@invoicexpress.com","phone":"213456789","mobile":null},"observations":"Observations","send_options":1}}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 22:57:20 GMT
+recorded_with: VCR 5.0.0

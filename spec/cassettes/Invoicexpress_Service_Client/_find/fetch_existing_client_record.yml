@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/clients/6212263.json?api_key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7CDoMdXNlcl9pZGkC8V06DXByb3ZpZGVybzoNUHJvdmlkZXIHOhZAYXR0cmlidXRlc19jYWNoZXsAOhBAYXR0cmlidXRlc3sjIhZzYWZ0X3Byb2R1Y3RfbmFtZSIZSW52b2ljZVhwcmVzcy9SVVBFQUwiB2lkIgY3Ig9jcmVhdGVkX2F0IhgyMDExLTA0LTE0IDEzOjM0OjM3IhFwcm9kdWN0X25hbWUiEkludm9pY2VYcHJlc3MiGG5vdGlmaWNhdGlvbnNfZW1haWwiJG5vdGlmaWNhdGlvbnNAaW52b2ljZXhwcmVzcy5jb20iCnBob25lMCITc2hvd19mZWVkX2JhY2siBjEiEGVtYWlsX2xhYmVsIiVFbWFpbDogc3VwcG9ydEBpbnZvaWNleHByZXNzLmNvbSIgc29mdHdhcmVfY2VydGlmaWNhdGVfbnVtYmVyIggxOTIiCXBhdGgiACINaG9zdG5hbWUiHnd3dy5hcHAuaW52b2ljZXhwcmVzcy5jb20iE3RheF9jb3VudHJ5X2lkIgYxIg13aXRoX2NzcyIGMCITYmxvY2tfYWNjb3VudHMiBjEiHGRlZmF1bHRfc3VwcG9ydF9jaGFubmVsMCIPc2VjdXJlX2tleSItZWE4N2Y4NzUzNGZmODhiYzU4NTI1Yzg5YTIyMWEyNjA5ZmVkMWYzMSISdXJsX3Nob3J0X2F1eCIaYXBwLmludm9pY2V4cHJlc3MuY29tIg9mcm9tX2VtYWlsIiRpbnZvaWNleHByZXNzQGludm9pY2V4cHJlc3MuY29tIgluYW1lIhBJRS5tYWtlb3ZlciIPdXBkYXRlZF9hdCIYMjAxMi0xMC0wOCAxNToxNjoxMyIKZW1haWwiHnN1cHBvcnRAaW52b2ljZXhwcmVzcy5jb20iEmNvbnRhY3RfbGFiZWwiH1dlYjogd3d3Lmludm9pY2V4cHJlc3MuY29tIg9vd25faGVhZGVyIgYxIhNwYXltZW50c19lbWFpbCIfcGF5bWVudHNAaW52b2ljZXhwcmVzcy5jb20iFXB1YmxpY191cmxfc2hvcnQiGmFwcC5pbnZvaWNleHByZXNzLmNvbSIUZGVmYXVsdF9wbGFuX2lkIgc2NSIRY29tcGFueV9uYW1lIgtSdXBlYWwiEWNvbXBhbnlfc2l0ZSITd3d3LnJ1cGVhbC5jb20iDnNob3dfcGxhbiIGMSIOdXJsX3Nob3J0IhphcHAuaW52b2ljZXhwcmVzcy5jb206D3Nlc3Npb25faWQiJTYzMTVkOTE0MDU1ZTM0MThjYzM4ZTRlMTFhYzRiOTI1--4cebacc04b5e82269629cc669f19bf5b48f43014;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      Etag:
+      - '"3bc439d89789c84162307f93160a52f9"'
+      X-Runtime:
+      - '125'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Server:
+      - nginx
+    body:
+      encoding: ASCII-8BIT
+      string: '{"client":{"id":6212263,"name":"Client Name","code":"12345","language":"pt","email":"foo@bar.com","address":"Avenida
+        da Rep\u00fablica, Lisboa","city":"Lisboa","postal_code":"1050-555","fiscal_id":"508025338","website":"www.invoicexpress.com","country":"Portugal","phone":"213456789","fax":"213456788","preferred_contact":{"name":"Bruce
+        Norris","email":"email@invoicexpress.com","phone":"213456789","mobile":null},"observations":"Observations","open_account_link":"http://www.app.invoicexpress.com/suppliers/14994952d6fe5f17e68f296bd230b139b2bcc7a8","send_options":1,"payment_days":0,"tax_exemption_code":"M00"}}'
+    http_version: 
+  recorded_at: Tue, 03 Sep 2019 22:58:48 GMT
+recorded_with: VCR 5.0.0
