@@ -1,7 +1,19 @@
 ---
-sudo: false
+bundler_args: --without development
 language: ruby
-cache: bundler
+before_install: gem install bundler -v '<2'
 rvm:
-  - 2.5.1
-before_install: gem install bundler -v 1.17.3
+  - 2.3
+  - 2.4
+  - 2.5.0
+  - 2.6.3
+  - jruby-head
+  - rbx-2
+env:
+  - INVOICE_EXPRESS_ACCOUNT_NAME=test-account-name
+  - INVOICE_EXPRESS_AKI_KEY=test-api-key
+matrix:
+  allow_failures:
+    - rvm: jruby-head
+    - rvm: rbx-2
+  fast_finish: true
