@@ -1,14 +1,16 @@
 require "bundler/setup"
-Bundler.require(:default, :development)
 
-require "invoicexpress"
+# simplecov needs to be added before any projects files are required
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/spec/'
+end
 
 ACCOUNT_NAME = ENV['INVOICE_EXPRESS_ACCOUNT_NAME'].freeze
 API_KEY = ENV['INVOICE_EXPRESS_AKI_KEY'].freeze
 
-SimpleCov.start do
-  add_filter '/spec/'
-end
+Bundler.require(:default, :development)
+require "invoicexpress"
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
