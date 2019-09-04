@@ -1,7 +1,5 @@
----
 language: ruby
 bundler_args: --without development
-language: ruby
 before_install: gem install bundler -v '<2'
 rvm:
   - 2.3
@@ -11,8 +9,7 @@ rvm:
   - jruby-head
   - rbx-2
 env:
-  - INVOICE_EXPRESS_ACCOUNT_NAME=test-account-name
-  - INVOICE_EXPRESS_AKI_KEY=test-api-key
+  - INVOICE_EXPRESS_ACCOUNT_NAME=test-account-name INVOICE_EXPRESS_AKI_KEY=test-api-key
 matrix:
   allow_failures:
     - rvm: jruby-head
