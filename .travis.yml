@@ -9,6 +9,14 @@ rvm:
   - truffleruby
 env:
   - INVOICE_EXPRESS_ACCOUNT_NAME=test-account-name INVOICE_EXPRESS_AKI_KEY=test-api-key
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT  
 matrix:
   allow_failures:
     - rvm: jruby-head
