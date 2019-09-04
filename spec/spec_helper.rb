@@ -6,6 +6,10 @@ require "invoicexpress"
 ACCOUNT_NAME = ENV['INVOICE_EXPRESS_ACCOUNT_NAME'].freeze
 API_KEY = ENV['INVOICE_EXPRESS_AKI_KEY'].freeze
 
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
