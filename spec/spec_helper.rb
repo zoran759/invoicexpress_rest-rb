@@ -1,8 +1,7 @@
 require "bundler/setup"
-require "invoicexpress"
+Bundler.require(:default, :development)
 
-require "vcr"
-require "pry-byebug"
+require "invoicexpress"
 
 ACCOUNT_NAME = ENV['INVOICE_EXPRESS_ACCOUNT_NAME'].freeze
 API_KEY = ENV['INVOICE_EXPRESS_AKI_KEY'].freeze
