@@ -23,9 +23,8 @@ module Invoicexpress
       response = nil
       begin
         response = faraday.send(method, uri) do |request|
-          request.body = body.to_json unless body.nil?
+          request.body = body.to_json unless empty_payload?(body)
         end
-        puts response.inspect
       rescue => e
         $stderr.puts e.inspect
       end
@@ -35,7 +34,7 @@ module Invoicexpress
         if block_given?
           block.call(body)
         else
-          JSON.parse(body) unless body.to_s.strip.empty?
+          JSON.parse(body) unless empty_payload?(body)
         end
       else
         raise_error!(response)
@@ -54,6 +53,10 @@ module Invoicexpress
       when 422
         raise UnprocessableEntity, response.reason_phrase
       end
+    end
+
+    def empty_payload?(body)
+      body.to_s.strip.empty?
     end
 
   end
