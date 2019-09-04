@@ -25,7 +25,7 @@ end
 
 # Or configure each instance independently
 @client = Invoicexpress.new(
-  api_key: ENV['API_KEY']
+  api_key: ENV['INVOICE_EXPRES_API_KEY']
   account_name: ENV['INVOICE_EXPRESS_ACCOUNT_NAME']
 )
 ```
@@ -56,4 +56,4 @@ end
 
 ## License
 
-Colombo is free software distributed under the terms of the MIT license reproduced [here](http://opensource.org/licenses/mit-license.html).
+invoicexpress-rest is free software distributed under the terms of the MIT license reproduced [here](http://opensource.org/licenses/mit-license.html).
