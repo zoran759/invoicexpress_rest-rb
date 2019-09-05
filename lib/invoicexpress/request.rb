@@ -16,7 +16,7 @@ module Invoicexpress
         }
       }
 
-      faraday_init[:params] = faraday_init[:params].merge(params) unless params.nil?
+      faraday_init[:params] = get_query_params(faraday_init[:params].merge(params)) unless params.nil?
 
       faraday = Faraday.new(faraday_init)
 
@@ -57,6 +57,10 @@ module Invoicexpress
 
     def empty_payload?(body)
       body.to_s.strip.empty?
+    end
+
+    def get_query_params(params)
+      params.reject{ |k,v| v.nil? }
     end
 
   end
