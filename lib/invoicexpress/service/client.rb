@@ -67,6 +67,7 @@ module Invoicexpress
       end
 
       def invoices(client_id, options = {})
+        options = options.merge(method: :post)
         CollectionProxy.new(client, "invoices", "clients/#{client_id}/invoices.json", options)
       end
     end

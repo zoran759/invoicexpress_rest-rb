@@ -28,7 +28,6 @@ module Invoicexpress
       rescue => e
         $stderr.puts e.inspect
       end
-
       if response.success?
         body = response.body
         if block_given?
@@ -43,15 +42,36 @@ module Invoicexpress
 
     private
     def raise_error!(response)
+
+      # TODO: Fix issue with clients/client_id/invoices.json that is returning
+      #       HTML instead of json content
+      #
+      begin
+        description = JSON.parse(response.body) unless empty_payload?(response.body)
+      rescue JSON::ParserError => e
+        raise NotFound, e
+      end
+
+
+      if description.nil?
+        message = response.reason_phrase
+      elsif description.is_a?(Hash) && description["errors"] && description["errors"].is_a?(Array) && description["errors"].size != 0
+        message = "#{response.reason_phrase}: #{description["errors"][0].values.first}"
+      elsif description.is_a?(Array) && description.size != 0
+        message = "#{response.reason_phrase}: #{description.collect{ |a, b| "#{a} #{b}" }.join(', ')}"
+      else
+        message = "#{response.reason_phrase}: #{description}"
+      end
+
       case response.status
       when 401
-        raise Unauthorized, response.reason_phrase
+        raise Unauthorized, message
       when 404
-        raise NotFound, response.reason_phrase
+        raise NotFound, message
       when 406
-        raise NotAcceptable, response.reason_phrase
+        raise NotAcceptable, message
       when 422
-        raise UnprocessableEntity, response.reason_phrase
+        raise UnprocessableEntity, message
       end
     end
 

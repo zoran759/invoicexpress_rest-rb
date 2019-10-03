@@ -3,19 +3,20 @@ module Invoicexpress
 
     include Enumerable
 
-    attr_reader :collection_name, :collection_url, :client, :options
+    attr_reader :collection_name, :collection_url, :client, :options, :method
 
     def initialize(client, collection_name, collection_url, options={})
       @client           = client
       @collection_name  = collection_name
       @collection_url   = collection_url
       @options          = options
+      @method           = options.delete(:method) || :get
     end
 
     def each(&block)
       next_page = nil
       loop do
-        collection = client.get(collection_url, options.merge({page: next_page}))
+        collection = client.send(method, collection_url, options.merge({page: next_page}))
         collection[collection_name].each do |item_data|
           yield resource_class.new(item_data)
         end
@@ -35,7 +36,7 @@ module Invoicexpress
     end
 
     def collection_size
-      collection = client.get(collection_url, options)
+      collection = client.send(method, collection_url, options)
       if collection.has_key?("pagination")
         collection['pagination']['total_entries'].to_i
       else

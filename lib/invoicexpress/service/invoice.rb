@@ -2,8 +2,8 @@ module Invoicexpress
   module Service
     class Invoice
       DOCUMENT_TYPES = %w[
-        invoices simplified_invoices invoice_receipts
-        vat_moss_invoices credit_notes debit_notes
+        invoice simplified_invoice invoice_receipt
+        vat_moss_invoice credit_note debit_note
       ].freeze
 
       attr_reader :client
@@ -52,13 +52,25 @@ module Invoicexpress
         client.get("api/pdf/#{document_id}.json", options)
       end
 
-      def create(params)
-        json = client.post("invoices.json", nil, {invoice: params})
-        Invoicexpress::Model::Invoice.new(json["invoice"])
+      # Creates a new invoice, simplified_invoice, invoice_receipt, credit_note, debit_note
+      # This is an asynchronous operation, which means the PDF file may not be ready immediately.
+      #
+      # @param document_id [String] Id of the invoice to get
+      # @option document_type [String] Invoice document type invoices, simplified_invoices
+      #
+      # @return [CollectionProxy] An iterator with all your invoices
+      # @raise Invoicexpress::Unauthorized When the client is unauthorized
+      # @raise Invoicexpress::NotAcceptable The document_id provided is in an invalid state.
+      def create(params = {}, document_type = :invoice)
+        raise ArgumentError.new("Invalid document_type `#{document_type}` expected on of #{DOCUMENT_TYPES.join(', ')}") unless DOCUMENT_TYPES.include?(document_type.to_s)
+        json = client.post("#{document_type}s.json", nil, {invoice: params})
+        klass = Utils.constantize_singular_resource_name(document_type.to_s)
+        klass.new(json[document_type.to_s])
       end
 
-      def update(document_id, document_type = 'invoice', state: state)
+      def update(document_id, document_type = 'invoice', state)
         json = client.put("/purchase_orders/#{document_type}/#{document_id}.json")
+        Invoicexpress::Model::Invoice.new(json["invoice"])
       end
 
     end

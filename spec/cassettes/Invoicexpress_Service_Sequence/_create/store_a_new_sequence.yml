@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACCOUNT_NAME.app.invoicexpress.com/sequences.json?api_key=API_KEY
+    body:
+      encoding: UTF-8
+      string: '{"sequence":{"serie":2017,"default_sequence":1}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Mozilla/5.0 (compatible; Invoicexpress Ruby API Client/0.1.0; +https://github.com/lmmendes/invoicexpress-rest)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1243'
+      Connection:
+      - keep-alive
+      Status:
+      - '201'
+      Set-Cookie:
+      - _makeover_app_ix_com_session=BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiIFPDqXJpZSBncmF2YWRhIGNvbSBzdWNlc3NvLgY6CkB1c2VkewY7BkY6D3Nlc3Npb25faWQiJTQ4ZmUzZmM1OTI0NGFlODVkYTNlN2RjYTVkZThlODMw--30912876921764509fdb0c6120536839fdfcf6cc;
+        domain=.app.invoicexpress.com; path=/; HttpOnly
+      X-Runtime:
+      - '511'
+      Cache-Control:
+      - no-cache
+      Server:
+      - nginx
+    body:
+      encoding: UTF-8
+      string: '{"sequence":{"id":1424772,"serie":2017,"default_sequence":0,"current_invoice_number":0,"current_invoice_sequence_id":1424772,"current_invoice_receipt_number":0,"current_invoice_receipt_sequence_id":1424774,"current_simplified_invoice_number":0,"current_simplified_invoice_sequence_id":1424773,"current_credit_note_number":0,"current_credit_note_sequence_id":1424777,"current_debit_note_number":0,"current_debit_note_sequence_id":1424776,"current_receipt_number":0,"current_receipt_sequence_id":1424775,"current_shipping_number":0,"current_shipping_sequence_id":1424786,"current_transport_number":0,"current_transport_sequence_id":1424788,"current_devolution_number":0,"current_devolution_sequence_id":1424787,"current_proforma_number":0,"current_proforma_sequence_id":1424784,"current_quote_number":0,"current_quote_sequence_id":1424783,"current_fees_note_number":0,"current_fees_note_sequence_id":1424785,"current_purchase_order_number":0,"current_purchase_order_sequence_id":1424782,"current_vat_moss_invoice_number":0,"current_vat_moss_invoice_sequence_id":1424779,"current_vat_moss_credit_note_number":0,"current_vat_moss_credit_note_sequence_id":1424780,"current_vat_moss_receipt_number":0,"current_vat_moss_receipt_sequence_id":1424781}}'
+    http_version: 
+  recorded_at: Thu, 19 Sep 2019 22:28:37 GMT
+recorded_with: VCR 5.0.0
