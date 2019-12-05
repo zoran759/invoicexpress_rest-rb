@@ -39,14 +39,6 @@ end
 
 ```
 
-## Bug reports and other issues
-
-* https://github.com/lmmendes/invoicexpress_rest-rb/issues
-
-## Help and Docs
-
-* https://github.com/lmmendes/invoicexpress_rest-rb/wiki
-
 ## Contributing
 
 * Fork the project.
